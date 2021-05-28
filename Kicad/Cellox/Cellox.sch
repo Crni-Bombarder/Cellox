@@ -1,4 +1,377 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 1500 3750 1050 400 
+U 60AFDF4F
+F0 "Battery_Management" 50
+F1 "Battery_Management.sch" 50
+F2 "VBat" O R 2550 3900 50 
+F3 "Vin" I L 1500 3900 50 
+$EndSheet
+$Comp
+L Connector:Jack-DC J?
+U 1 1 60AFE55E
+P 850 4000
+F 0 "J?" H 907 4325 50  0000 C CNN
+F 1 "Jack-DC" H 907 4234 50  0000 C CNN
+F 2 "" H 900 3960 50  0001 C CNN
+F 3 "~" H 900 3960 50  0001 C CNN
+	1    850  4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 3900 1500 3900
+Wire Wire Line
+	1150 4100 1250 4100
+Wire Wire Line
+	1250 4100 1250 4250
+$Comp
+L power:GND #PWR?
+U 1 1 60AFEC0D
+P 1250 4250
+F 0 "#PWR?" H 1250 4000 50  0001 C CNN
+F 1 "GND" H 1255 4077 50  0000 C CNN
+F 2 "" H 1250 4250 50  0001 C CNN
+F 3 "" H 1250 4250 50  0001 C CNN
+	1    1250 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:XLR3 J?
+U 1 1 60B00380
+P 1200 2100
+F 0 "J?" H 1200 2465 50  0000 C CNN
+F 1 "XLR3" H 1200 2374 50  0000 C CNN
+F 2 "" H 1200 2100 50  0001 C CNN
+F 3 " ~" H 1200 2100 50  0001 C CNN
+	1    1200 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  2100 650  2100
+Wire Wire Line
+	650  2100 650  2300
+$Comp
+L power:GND #PWR?
+U 1 1 60B00E15
+P 650 2300
+F 0 "#PWR?" H 650 2050 50  0001 C CNN
+F 1 "GND" H 655 2127 50  0000 C CNN
+F 2 "" H 650 2300 50  0001 C CNN
+F 3 "" H 650 2300 50  0001 C CNN
+	1    650  2300
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 1600 2000 1350 600 
+U 60B0138C
+F0 "XLR_input" 50
+F1 "XLR_input.sch" 50
+F2 "Signal+" I L 1600 2100 50 
+F3 "Signal-" I L 1600 2500 50 
+F4 "SignalOut" O R 2950 2100 50 
+$EndSheet
+Wire Wire Line
+	1200 2400 1200 2500
+$Sheet
+S 3250 2000 1350 600 
+U 60B09EA1
+F0 "Distortion" 50
+F1 "Distortion.sch" 50
+F2 "SignalIn" I L 3250 2100 50 
+F3 "SignalOut" O R 4600 2100 50 
+$EndSheet
+$Sheet
+S 4900 2000 1350 600 
+U 60B0A05C
+F0 "Tone_Volume" 50
+F1 "Tone_Volume.sch" 50
+F2 "SignalOut" O R 6250 2100 50 
+F3 "SignalIn" I L 4900 2100 50 
+$EndSheet
+$Sheet
+S 6550 1700 1350 600 
+U 60B0A1DC
+F0 "Bypass" 50
+F1 "Bypass.sch" 50
+F2 "DistortionIn" I L 6550 2100 50 
+F3 "BypassIn" I L 6550 1800 50 
+F4 "SignalOut" O R 7900 1800 50 
+$EndSheet
+Wire Wire Line
+	2950 2100 3100 2100
+$Sheet
+S 8200 1700 1350 600 
+U 60B0A468
+F0 "Jack_Output" 50
+F1 "Jack_Output.sch" 50
+F2 "SignalIn" I L 8200 1800 50 
+F3 "SignalOut" O R 9550 1800 50 
+$EndSheet
+Wire Wire Line
+	3100 2100 3100 1800
+Connection ~ 3100 2100
+Wire Wire Line
+	3100 2100 3250 2100
+Wire Wire Line
+	7900 1800 8200 1800
+Wire Wire Line
+	6250 2100 6550 2100
+Wire Wire Line
+	4600 2100 4900 2100
+Wire Wire Line
+	3100 1800 6550 1800
+Wire Wire Line
+	1500 2100 1600 2100
+Wire Wire Line
+	1200 2500 1600 2500
+$Comp
+L Connector:AudioJack2_SwitchT J?
+U 1 1 60B1463A
+P 10200 1900
+F 0 "J?" H 10020 1925 50  0000 R CNN
+F 1 "AudioJack2_SwitchT" H 10020 1834 50  0000 R CNN
+F 2 "" H 10200 1900 50  0001 C CNN
+F 3 "~" H 10200 1900 50  0001 C CNN
+	1    10200 1900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 1800 9550 1800
+Wire Wire Line
+	10000 1900 9700 1900
+Wire Wire Line
+	9700 1900 9700 2050
+$Comp
+L power:GND #PWR?
+U 1 1 60B1678D
+P 9700 2050
+F 0 "#PWR?" H 9700 1800 50  0001 C CNN
+F 1 "GND" H 9705 1877 50  0000 C CNN
+F 2 "" H 9700 2050 50  0001 C CNN
+F 3 "" H 9700 2050 50  0001 C CNN
+	1    9700 2050
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 3050 3750 1050 400 
+U 60B16C7F
+F0 "DC_DC_9V" 50
+F1 "DC_DC_9V.sch" 50
+F2 "Vin" I L 3050 3900 50 
+F3 "+9V" O R 4100 3900 50 
+F4 "Enable" I L 3050 4100 50 
+$EndSheet
+$Comp
+L Device:Q_NMOS_DGS Q?
+U 1 1 60B16F6A
+P 10500 3250
+F 0 "Q?" H 10704 3296 50  0000 L CNN
+F 1 "Q_NMOS_DGS" H 10704 3205 50  0000 L CNN
+F 2 "" H 10700 3350 50  0001 C CNN
+F 3 "~" H 10500 3250 50  0001 C CNN
+	1    10500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60B17DEF
+P 10600 2800
+F 0 "R?" H 10670 2846 50  0000 L CNN
+F 1 "R" H 10670 2755 50  0000 L CNN
+F 2 "" V 10530 2800 50  0001 C CNN
+F 3 "~" H 10600 2800 50  0001 C CNN
+	1    10600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L schematic_symbols_cellox:Vbat #PWR?
+U 1 1 60B19755
+P 2800 3850
+F 0 "#PWR?" H 2600 3700 50  0001 C CNN
+F 1 "Vbat" H 2817 4023 50  0000 C CNN
+F 2 "" H 2800 3850 50  0001 C CNN
+F 3 "" H 2800 3850 50  0001 C CNN
+	1    2800 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 3850 2800 3900
+Wire Wire Line
+	2800 3900 2550 3900
+Connection ~ 2800 3900
+Wire Wire Line
+	2800 3900 3050 3900
+$Sheet
+S 4600 3750 1050 400 
+U 60B1EC99
+F0 "Phantom_Alim" 50
+F1 "Phantom_Alim.sch" 50
+F2 "Vin" I L 4600 3900 50 
+F3 "+48V" O R 5650 3900 50 
+F4 "Enable" I L 4600 4100 50 
+$EndSheet
+Wire Wire Line
+	5650 3900 5850 3900
+Wire Wire Line
+	5850 3900 5850 3850
+$Comp
+L power:+9V #PWR?
+U 1 1 60B1FAEF
+P 4350 3850
+F 0 "#PWR?" H 4350 3700 50  0001 C CNN
+F 1 "+9V" H 4365 4023 50  0000 C CNN
+F 2 "" H 4350 3850 50  0001 C CNN
+F 3 "" H 4350 3850 50  0001 C CNN
+	1    4350 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 3850 4350 3900
+$Comp
+L power:+48V #PWR?
+U 1 1 60B20423
+P 5850 3850
+F 0 "#PWR?" H 5850 3700 50  0001 C CNN
+F 1 "+48V" H 5865 4023 50  0000 C CNN
+F 2 "" H 5850 3850 50  0001 C CNN
+F 3 "" H 5850 3850 50  0001 C CNN
+	1    5850 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L schematic_symbols_cellox:Vbat #PWR?
+U 1 1 60B20C77
+P 10200 2550
+F 0 "#PWR?" H 10000 2400 50  0001 C CNN
+F 1 "Vbat" H 10217 2723 50  0000 C CNN
+F 2 "" H 10200 2550 50  0001 C CNN
+F 3 "" H 10200 2550 50  0001 C CNN
+	1    10200 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60B212E3
+P 10200 2800
+F 0 "R?" H 10270 2846 50  0000 L CNN
+F 1 "R" H 10270 2755 50  0000 L CNN
+F 2 "" V 10130 2800 50  0001 C CNN
+F 3 "~" H 10200 2800 50  0001 C CNN
+	1    10200 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 2550 10200 2650
+Wire Wire Line
+	10200 2950 10200 3250
+Wire Wire Line
+	10600 2950 10600 3000
+Wire Wire Line
+	10600 2650 10600 2550
+$Comp
+L schematic_symbols_cellox:Vbat #PWR?
+U 1 1 60B249A3
+P 10600 2550
+F 0 "#PWR?" H 10400 2400 50  0001 C CNN
+F 1 "Vbat" H 10617 2723 50  0000 C CNN
+F 2 "" H 10600 2550 50  0001 C CNN
+F 3 "" H 10600 2550 50  0001 C CNN
+	1    10600 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60B2500B
+P 10200 3550
+F 0 "C?" H 10315 3596 50  0000 L CNN
+F 1 "C" H 10315 3505 50  0000 L CNN
+F 2 "" H 10238 3400 50  0001 C CNN
+F 3 "~" H 10200 3550 50  0001 C CNN
+	1    10200 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 3450 10600 3800
+Connection ~ 10600 3000
+Wire Wire Line
+	10600 3000 10600 3050
+Wire Wire Line
+	10000 2000 9850 2000
+Text Label 10900 3000 2    50   ~ 0
+Enable
+Wire Wire Line
+	10600 3000 10900 3000
+$Comp
+L power:GND #PWR?
+U 1 1 60B278FD
+P 10600 3800
+F 0 "#PWR?" H 10600 3550 50  0001 C CNN
+F 1 "GND" H 10605 3627 50  0000 C CNN
+F 2 "" H 10600 3800 50  0001 C CNN
+F 3 "" H 10600 3800 50  0001 C CNN
+	1    10600 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60B27F90
+P 10200 3800
+F 0 "#PWR?" H 10200 3550 50  0001 C CNN
+F 1 "GND" H 10205 3627 50  0000 C CNN
+F 2 "" H 10200 3800 50  0001 C CNN
+F 3 "" H 10200 3800 50  0001 C CNN
+	1    10200 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 3250 10200 3400
+Connection ~ 10200 3250
+Wire Wire Line
+	10200 3700 10200 3800
+$Comp
+L Device:R R?
+U 1 1 60B2C648
+P 9850 2800
+F 0 "R?" H 9920 2846 50  0000 L CNN
+F 1 "R" H 9920 2755 50  0000 L CNN
+F 2 "" V 9780 2800 50  0001 C CNN
+F 3 "~" H 9850 2800 50  0001 C CNN
+	1    9850 2800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10300 3250 10200 3250
+Wire Wire Line
+	9850 2000 9850 2650
+Wire Wire Line
+	9850 2950 9850 3250
+Wire Wire Line
+	9850 3250 10200 3250
+Text Label 2750 4100 0    50   ~ 0
+Enable
+Text Label 4300 4100 0    50   ~ 0
+Enable
+Connection ~ 4350 3900
+Wire Wire Line
+	4100 3900 4350 3900
+Wire Wire Line
+	4350 3900 4600 3900
+Wire Wire Line
+	4600 4100 4300 4100
+Wire Wire Line
+	3050 4100 2750 4100
 $EndSCHEMATC
