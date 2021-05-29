@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-INA597 Test Circuit"  [ C:\USERS\A0273407\DOCUMENTS\PROJECTS\PSPICE\MACROMODELS\MODELS\INA597\RELEASE\APL\INA597_PSpice\INA597 Test Circuit-PSpiceFiles\SCHEMATIC1\INA597 Test Circuit.sim ] 
+
+** Creating circuit file "INA597 Test Circuit.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ina597.lib" 
+* From [PSPICE NETLIST] section of C:\Users\a0273407\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2m 0 2u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

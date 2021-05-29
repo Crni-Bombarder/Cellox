@@ -1,0 +1,8 @@
+* source INA597 TEST CIRCUIT
+C_CL         0 OUT  15p  TC=0,0 
+R_RL         0 OUT  10k TC=0,0 
+V_Vcc         N12680 0 18Vdc
+V_Vee         N13070 0 -18Vdc
+V_VIN         N13463 0  AC 0
++SIN 0 100m 1k 0 0 0
+X_U1         N13463 0 N12680 N13070 OUT OUT 0 INA597 

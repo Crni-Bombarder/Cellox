@@ -1,0 +1,12 @@
+.title KiCad schematic
+.include "PspiceModel\MMBT2222A\MMBT2222A.lib"
+V2 +9V GND dc 15 ac 0
+V3 Vref GND dc 4.5 ac 0
+V1 /VoutAmp GND dc 0 ac 1 sin(0 5 1k)
+R2 Net-_C1-Pad2_ GND 20k
+R7 /Vout GND 3.3k
+C1 /VoutAmp Net-_C1-Pad2_ 1000000u
+R1 +9V Net-_C1-Pad2_ 20k
+Q1 /Vout Net-_C1-Pad2_ +9V DI_MMBT2222A
+.ac dec 3000 1 40k 
+.end

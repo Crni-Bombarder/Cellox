@@ -1,0 +1,61 @@
+**************** uncommented deck **************
+
+     1       1  KiCad schematic
+     0       2  .global gnd
+     3       4  v2 +9v 0 dc 15 ac 0
+     4       5  v3 vref 0 dc 4.5 ac 0
+     5       6  v1 /voutamp 0 dc 0 ac 1 sin(0 5 1k)
+     6       7  r2 net-_c?-pad2_ 0 20k
+     7       8  r7 /vout 0 3.3k
+     8       9  c? /voutamp net-_c?-pad2_ 1000000u
+     9      10  r? +9v net-_c?-pad2_ 20k
+    10      11  q? /vout net-_c?-pad2_ +9v 2n3904
+    11      12  .save @v2[i]
+    12      13  .save @v3[i]
+    13      14  .save @v1[i]
+    14      15  .save @r2[i]
+    15      16  .save @r7[i]
+    16      17  .save @c?[i]
+    17      18  .save @r?[i]
+    18      19  .save @q?[ib]
+    19      20  .save @q?[ic]
+    20      21  .save @q?[ie]
+    21      22  .save v(+9v)
+    22      23  .save v(/vout)
+    23      24  .save v(/voutamp)
+    24      25  .save v(net-_c?-pad2_)
+    25      26  .save v(vref)
+    26      27  .tran 100u 100m
+    28      29  .end
+
+****************** complete deck ***************
+
+     1       1  KiCad schematic
+     0       2  .global gnd
+     2       3  *title kicad schematic
+     3       4  v2 +9v 0 dc 15 ac 0
+     4       5  v3 vref 0 dc 4.5 ac 0
+     5       6  v1 /voutamp 0 dc 0 ac 1 sin(0 5 1k)
+     6       7  r2 net-_c?-pad2_ 0 20k
+     7       8  r7 /vout 0 3.3k
+     8       9  c? /voutamp net-_c?-pad2_ 1000000u
+     9      10  r? +9v net-_c?-pad2_ 20k
+    10      11  q? /vout net-_c?-pad2_ +9v 2n3904
+    11      12  .save @v2[i]
+    12      13  .save @v3[i]
+    13      14  .save @v1[i]
+    14      15  .save @r2[i]
+    15      16  .save @r7[i]
+    16      17  .save @c?[i]
+    17      18  .save @r?[i]
+    18      19  .save @q?[ib]
+    19      20  .save @q?[ic]
+    20      21  .save @q?[ie]
+    21      22  .save v(+9v)
+    22      23  .save v(/vout)
+    23      24  .save v(/voutamp)
+    24      25  .save v(net-_c?-pad2_)
+    25      26  .save v(vref)
+    26      27  .tran 100u 100m
+    27      28  *end
+    28      29  .end

@@ -1,0 +1,29 @@
+****************** complete mc deck ***************
+
+     0       0  KiCad schematic
+     0       1  .global gnd
+     0       2  v2 +9v 0 dc 9 ac 0
+     0       3  v3 vref 0 dc 4.5 ac 0
+     0       4  v1 /voutamp 0 dc 0 ac 1 sin(0 1 1k)
+     0       5  r2 net-_c?-pad2_ vref 20k
+     0       6  r7 /vout 0 100k
+     0       7  c? /voutamp net-_c?-pad2_ 1000000u
+     0       8  r? +9v net-_c?-pad2_ 20k
+     0       9  q? /vout net-_c?-pad2_ +9v 2n3904
+     0      10  .save @v2[i]
+     0      11  .save @v3[i]
+     0      12  .save @v1[i]
+     0      13  .save @r2[i]
+     0      14  .save @r7[i]
+     0      15  .save @c?[i]
+     0      16  .save @r?[i]
+     0      17  .save @q?[ib]
+     0      18  .save @q?[ic]
+     0      19  .save @q?[ie]
+     0      20  .save v(+9v)
+     0      21  .save v(/vout)
+     0      22  .save v(/voutamp)
+     0      23  .save v(net-_c?-pad2_)
+     0      24  .save v(vref)
+     0      25  .tran 100u 20m
+     0      26  .end

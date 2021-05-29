@@ -1,0 +1,262 @@
+
+**** 08/29/19 17:24:40 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-INA597 Test Circuit"  [ C:\USERS\A0273407\DOCUMENTS\PROJECTS\PSPICE\MACROMODELS\MODELS\INA597\RELEASE\APL\IN
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "INA597 Test Circuit.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ina597.lib" 
+* From [PSPICE NETLIST] section of C:\Users\a0273407\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2m 0 2u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INA597 TEST CIRCUIT
+C_CL         0 OUT  15p  TC=0,0 
+R_RL         0 OUT  10k TC=0,0 
+V_Vcc         N12680 0 18Vdc
+V_Vee         N13070 0 -18Vdc
+V_VIN         N13463 0  AC 0
++SIN 0 100m 1k 0 0 0
+X_U1         N13463 0 N12680 N13070 OUT OUT 0 INA597 
+
+**** RESUMING "INA597 Test Circuit.cir" ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file ina597.ind for library file ina597.lib.
+
+INFO(ORPSIM-15422): Making new index file ina597.ind for library file ina597.lib.
+
+Index has 17 entries from 1 file(s).
+
+**** 08/29/19 17:24:40 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-INA597 Test Circuit"  [ C:\USERS\A0273407\DOCUMENTS\PROJECTS\PSPICE\MACROMODELS\MODELS\INA597\RELEASE\APL\IN
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.Xi_nn.DVNF X_U1.Xi_np.DVNF X_U1.Xe_n.DVN   
+          IS  100.000000E-18  100.000000E-18  100.000000E-18 
+          KF  316.227800E-15  316.227800E-15    3.162278E-12 
+
+
+**** 08/29/19 17:24:40 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-INA597 Test Circuit"  [ C:\USERS\A0273407\DOCUMENTS\PROJECTS\PSPICE\MACROMODELS\MODELS\INA597\RELEASE\APL\IN
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.R_NOISELESS 
+  T_Measured   27            
+   T_Current -273.15         
+           R    1            
+
+
+**** 08/29/19 17:24:40 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-INA597 Test Circuit"  [ C:\USERS\A0273407\DOCUMENTS\PROJECTS\PSPICE\MACROMODELS\MODELS\INA597\RELEASE\APL\IN
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.ESD_SW     X_U1.OL_SW      X_U1.OR_SW      
+         RON   50               1.000000E-03     .01         
+        ROFF    1.000000E+12    1.000000E+09    1.000000E+09 
+         VON     .7              .9              .01         
+        VOFF     .65             .8             0            
+
+
+**** 08/29/19 17:24:40 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-INA597 Test Circuit"  [ C:\USERS\A0273407\DOCUMENTS\PROJECTS\PSPICE\MACROMODELS\MODELS\INA597\RELEASE\APL\IN
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT) 267.6E-06  (N12680)   18.0000 (N13070)  -18.0000 (N13463)    0.0000     
+
+(X_U1.25) 267.6E-06                   (X_U1.26) 178.4E-06                       
+
+(X_U1.27)-20.50E-09                   (X_U1.28) 448.9E-06                       
+
+(X_U1.29)-40.04E-09                   (X_U1.30)-40.04E-09                       
+
+(X_U1.31)-40.04E-09                   (X_U1.32)-40.04E-09                       
+
+(X_U1.33)    4.0004                   (X_U1.34)    4.0004                       
+
+(X_U1.35)   -3.9996                   (X_U1.36)   -3.9996                       
+
+(X_U1.37)     .0165                   (X_U1.38) 247.1E-09                       
+
+(X_U1.39) 6.026E-09                   (X_U1.40) 178.4E-06                       
+
+(X_U1.41) 178.4E-06                   (X_U1.42)     .0165                       
+
+(X_U1.43)     .0017                   (X_U1.44)     .0165                       
+
+(X_U1.45) 267.6E-06                   (X_U1.46)-5.760E-06                       
+
+(X_U1.47)   -1.8000                   (X_U1.48)-5.760E-06                       
+
+(X_U1.49)   -1.8000                   (X_U1.50)   65.0000                       
+
+(X_U1.51)  -65.0000                   (X_U1.52)-376.6E-24                       
+
+(X_U1.53)-376.6E-24                   (X_U1.54)    4.0004                       
+
+(X_U1.55)   -3.9996                   (X_U1.56)  251.0000                       
+
+(X_U1.57) -251.0000                   (X_U1.58) 448.9E-06                       
+
+(X_U1.59)-376.6E-24                   (X_U1.60)-376.6E-24                       
+
+(X_U1.61)-376.6E-24                   (X_U1.62)-376.6E-24                       
+
+(X_U1.63)-376.6E-24                   (X_U1.64)-376.6E-24                       
+
+(X_U1.65)   17.8300                   (X_U1.66)  -17.8100                       
+
+(X_U1.67)   17.8300                   (X_U1.68)  -17.8100                       
+
+(X_U1.69)-376.6E-24                   (X_U1.70)-376.6E-24                       
+
+(X_U1.71)-376.6E-24                   (X_U1.72)-376.6E-24                       
+
+(X_U1.73)-376.6E-24                   (X_U1.74) 41.63E-06                       
+
+(X_U1.75) 267.6E-06                   (X_U1.76) 448.9E-06                       
+
+(X_U1.77) 178.4E-06                   (X_U1.78)  -18.1000                       
+
+(X_U1.79)   18.1000                   (X_U1.80) 178.4E-06                       
+
+(X_U1.81)-376.6E-24                   (X_U1.82)  -18.0000                       
+
+(X_U1.83)   18.0000                   (X_U1.84) 178.4E-06                       
+
+(X_U1.MID)-376.6E-24                  (X_U1.ESDn) 178.4E-06                     
+
+(X_U1.ESDp)-20.50E-09                 (X_U1.VCLP) 448.9E-06                     
+
+(X_U1.CLAMP) 448.9E-06                (X_U1.SW_OL)-376.6E-24                    
+
+(X_U1.VCC_B)   18.0000                (X_U1.VEE_B)  -18.0000                    
+
+(X_U1.VIMON) 41.63E-06                (X_U1.VOUT_S) 267.6E-06                   
+
+(X_U1.VSENSE) 448.9E-06               (X_U1.Xe_n.3)    0.0000                   
+
+(X_U1.Xe_n.4)    0.0000               (X_U1.Xe_n.5)    0.0000                   
+
+(X_U1.Xe_n.6)    0.0000               (X_U1.Xe_n.7)     .8338                   
+
+(X_U1.Xe_n.8)     .8338               (X_U1.IN+_AMP)-20.00E-09                  
+
+(X_U1.IN-_AMP) 178.4E-06              (X_U1.VCC_CLP)   17.8300                  
+
+(X_U1.VEE_CLP)  -17.8100              (X_U1.Xi_nn.3)    0.0000                  
+
+(X_U1.Xi_nn.4)    0.0000              (X_U1.Xi_nn.5)    0.0000                  
+
+(X_U1.Xi_nn.6)    0.0000              (X_U1.Xi_nn.7)     .8338                  
+
+(X_U1.Xi_nn.8)     .8338              (X_U1.Xi_np.3)    0.0000                  
+
+(X_U1.Xi_np.4)    0.0000              (X_U1.Xi_np.5)    0.0000                  
+
+(X_U1.Xi_np.6)    0.0000              (X_U1.Xi_np.7)     .8338                  
+
+(X_U1.Xi_np.8)     .8338              (X_U1.CL_CLAMP) 448.9E-06                 
+
+(X_U1.CLAW_CLAMP) 448.9E-06           
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vcc       -1.100E-03
+    V_Vee        1.100E-03
+    V_VIN       -1.667E-12
+    X_U1.V_GRp  -2.510E-10
+    X_U1.V_GRn   2.510E-07
+    X_U1.V_ISCp  -6.500E-11
+    X_U1.V_ISCn   6.500E-11
+    X_U1.V_ORn   0.000E+00
+    X_U1.V11     4.004E-09
+    X_U1.V_ORp   0.000E+00
+    X_U1.V12    -4.004E-09
+    X_U1.V4      4.163E-08
+    X_U1.VCM_MIN   1.810E-11
+    X_U1.VCM_MAX  -1.811E-11
+
+    TOTAL POWER DISSIPATION   3.97E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 08/29/19 17:24:40 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-INA597 Test Circuit"  [ C:\USERS\A0273407\DOCUMENTS\PROJECTS\PSPICE\MACROMODELS\MODELS\INA597\RELEASE\APL\IN
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .55
+

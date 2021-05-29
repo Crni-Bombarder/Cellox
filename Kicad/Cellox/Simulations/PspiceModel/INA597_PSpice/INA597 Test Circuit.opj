@@ -1,0 +1,59 @@
+(ExpressProject "INA597 Test Circuit"
+  (ProjectVersion "19981106")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\ina597.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "ina597 test circuit.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\ina597 test circuit-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\ina597 test circuit-pspicefiles\schematic1\ina597 test circuit.sim"
+        (DisplayName "SCHEMATIC1-INA597 Test Circuit")
+        (Type "PSpice Profile"))
+      (ActiveProfile
+         ".\ina597 test circuit-pspicefiles\schematic1\ina597 test circuit.sim"))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\ina597.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\ina597.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (INA597
+      (FullPartName "INA597.Normal")
+      (LibraryName
+         "C:\USERS\A0273407\DOCUMENTS\PROJECTS\PSPICE\MACROMODELS\MODELS\INA597\RELEASE\APL\INA597_PSPICE\INA597.OLB")
+      (DeviceIndex "0"))
+    (INA592
+      (FullPartName "INA592.Normal")
+      (LibraryName
+         "C:\MACROMODELS\MODELS\INA592\RELEASE\APL\INA592_PSPICE\INA592.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\Macromodels\Models\INA592\Release\APL\INA592_PSpice")
+  (MPSSessionName "a0273407")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "Library")
+      (Path "Outputs")
+      (Select "Design Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 467"))
+      (Tab 0))))
